@@ -8,7 +8,7 @@ Installation
 
 This website uses buildout, run in the following way::
 
-    ln -s profiles/base.cfg buildout.cfg
+    cp buildout.cfg.dev buildout.cfg
     python bootstrap.py
     bin/buildout
 
