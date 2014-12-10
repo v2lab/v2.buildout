@@ -6,6 +6,17 @@ This website is located here: http://v2.nl
 Installation
 ------------
 
+The server uses Debian 7.
+Install the following debian packages::
+
+    sudo apt-get install gcc git python-dev libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev
+
+Set symlinks for PIL::
+
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libz.so /usr/lib
+
 This website uses buildout, run in the following way::
 
     cp buildout.cfg.dev buildout.cfg
@@ -30,5 +41,5 @@ See also this bug report: https://dev.plone.org/ticket/12255::
             cmf_meta_types = [ti.Metatype() for ti in ttool.listTypeInfo()]
   +         cmf_meta_types.append('ATBTreeFolder')
             return [obj['id'] for obj in objs if obj['meta_type'] in cmf_meta_types]
-  
+
         security.declareProtected(ModifyPortalContent, 'getObjectPosition')
