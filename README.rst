@@ -9,7 +9,7 @@ Installation
 The server uses Debian 8, Jessie.
 Install the following debian packages::
 
-    sudo apt-get install gcc git python-dev libtiff5-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev
+    sudo apt-get install gcc git python-dev libtiff5-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev libxml2-dev libxslt1-dev
 
 Set symlinks for PIL::
 
